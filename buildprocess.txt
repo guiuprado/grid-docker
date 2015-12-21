@@ -1,0 +1,9 @@
+Create Vault for Keys
+
+docker run -p 172.17.0.1:14242:3000 --name vault -d -v ~/.ssh:/vault/.ssh dockito/vault
+
+Build Docker image
+docker build --build-arg UID=422 --build-arg GID=10001 -t griddock grid-docker
+
+Run Image
+docker run --add-host vm:vm_db_ip -p 8000:8000 --name gridfab  -it griddock bash
