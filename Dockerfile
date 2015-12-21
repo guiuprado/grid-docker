@@ -1,4 +1,6 @@
-FROM debian:jessie
+FROM ubuntu:trusty
+
+MAINTAINER Michael Smith <Michael.smith.erdc@gmail.com>
 
 RUN apt-get update && apt-get install -y \
     git libxml2-dev python2.7 build-essential make gcc python2.7-dev locales python-pip python-docutils libaio1 \
